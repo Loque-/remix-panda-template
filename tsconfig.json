@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/.server/**/*.ts",
+    "**/.server/**/*.tsx",
+    "**/.client/**/*.ts",
+    "**/.client/**/*.tsx"
+  ],
+  "compilerOptions": {
+    // Base Config
+    // Type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // Language and environment
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "moduleDetection": "force",
+
+    // Modules
+    "resolveJsonModule": true,
+
+    // Completeness
+    "skipLibCheck": true,
+
+    // Projects
+    "incremental": false,
+
+    // Interop constraints
+    "isolatedModules": true,
+
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+
+    // Remix Config
+    // Modules
+    "types": ["@remix-run/node", "vite/client"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    // Language and environment
+    "jsx": "react-jsx",
+
+    // Interop constraints
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+
+    // Javascript support
+    "allowJs": true,
+
+    // Emit
+    "noEmit": true,
+
+    // App Config
+    "plugins": [],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    }
+  }
+}
